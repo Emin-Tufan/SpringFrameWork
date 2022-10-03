@@ -1,5 +1,5 @@
 package com.emintufan.utils;
 
 public class PermaLink {
-    //GİTHUB
+    //GİTHUB : https://github.com/Emin-Tufan/PatikaSpringFramework
 }
