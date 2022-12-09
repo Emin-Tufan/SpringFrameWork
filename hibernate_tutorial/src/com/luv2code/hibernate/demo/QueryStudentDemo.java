@@ -22,20 +22,34 @@ public class QueryStudentDemo {
 		try {
 			//Query Search
 			session.beginTransaction();
-			List <Student>getStudentList=session.createQuery("from Student").getResultList();
-			displayStudents(getStudentList);
+			//List <Student>getStudentList=session.createQuery("from Student").getResultList();
+			//displayStudents(getStudentList);
 			
 			// Conditional Query Search
-			getStudentList=session.createQuery("from Student a where a.name='Emin'").getResultList();
-			displayStudents(getStudentList);
+			//	getStudentList=session.createQuery("from Student a where a.name='Emin'").getResultList();
+			//	displayStudents(getStudentList);
 			
-			getStudentList=session.createQuery("from Student a where a.email like 'e%'").getResultList();
-			displayStudents(getStudentList);
+			//getStudentList=session.createQuery("from Student a where a.email like 'e%'").getResultList();
+			//displayStudents(getStudentList);
 			
+
+			
+			//HQL Update & Delete Process
+			session.get(Student.class,1).setName("Emin");
 			session.getTransaction().commit();
+			//session.createQuery("update Student set first_name='Mahmut' where id=1").executeUpdate();
+			
+			//Student student=session.get(Student.class, 1);
+			//session.delete(student);
+			
+			
+
+			
+			
 		}
 		finally {
 			factory.close();
+			session.close();
 		}
 	
 	}
