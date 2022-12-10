@@ -35,16 +35,14 @@ public class QueryStudentDemo {
 
 			
 			//HQL Update & Delete Process
-			session.get(Student.class,1).setName("Emin");
-			session.getTransaction().commit();
+			//session.get(Student.class,1).setName("Emin");
+			//session.getTransaction().commit();
 			//session.createQuery("update Student set first_name='Mahmut' where id=1").executeUpdate();
 			
 			//Student student=session.get(Student.class, 1);
 			//session.delete(student);
-			
-			
-
-			
+			//session.createQuery("update from Student set last_name='Ersever' where id=5").executeUpdate();
+			//session.getTransaction().commit();
 			
 		}
 		finally {
