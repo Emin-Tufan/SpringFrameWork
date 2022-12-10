@@ -22,7 +22,7 @@ public class EmployeeDemo {
 		
 		try {
 			session.beginTransaction();
-			Date date=DateUtil.parseDate("11/03/2003");
+			Date date=DateUtil.parseDate("2001/05/14");
 			Employee tempEmployee=new Employee("Emin","Tufan","Logo",date);
 			session.save(tempEmployee);
 			session.getTransaction().commit();
