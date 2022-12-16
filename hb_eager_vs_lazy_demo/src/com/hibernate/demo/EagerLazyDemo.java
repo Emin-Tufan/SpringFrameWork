@@ -26,8 +26,6 @@ public class EagerLazyDemo {
 			session.beginTransaction();
 			Instructor ins=session.get(Instructor.class, 1);
 		
-		
-		
 			session.getTransaction().commit();
 			
 			

@@ -19,7 +19,7 @@ import javax.persistence.Table;
 @Table(name = "instructor")
 public class Instructor {
 
-	@OneToMany(fetch = FetchType.LAZY,
+	@OneToMany(fetch = FetchType.EAGER,
 			mappedBy = "instructor", cascade = {
 			CascadeType.DETACH,CascadeType.MERGE,
 			CascadeType.PERSIST,CascadeType.REFRESH})
