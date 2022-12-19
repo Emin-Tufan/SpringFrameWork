@@ -110,6 +110,12 @@ public class Course {
 		}
 		this.students.add(student);
 	}
+	public void addRview(Review review) {
+		if(this.reviews==null) {
+			this.reviews=new ArrayList<>();
+		}
+		this.reviews.add(review);
+	}
 	
 	
 }

@@ -1,5 +1,7 @@
 package com.hibernate.demo;
 
+import javax.persistence.criteria.CriteriaBuilder.In;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -27,8 +29,11 @@ public class CourseAndStudentDemo {
 		
 		try {
 			session.beginTransaction();
-			Instructor ins=new Instructor("Esra","Eren","esra@gmail.com");
-			session.save(ins);
+			Student st=session.get(Student.class, 5);
+			session.delete(st);
+			
+	
+
 			session.getTransaction().commit();
 			
 		}
