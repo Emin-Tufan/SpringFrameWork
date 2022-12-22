@@ -52,7 +52,7 @@
 		      <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
 		      <prop key="hibernate.show_sql">true</prop>
 		   </props>
-		</property>
+		</property>	
    </bean>	  
 
     <!-- Step 3: Setup Hibernate transaction manager -->
@@ -65,7 +65,8 @@
 	<tx:annotation-driven transaction-manager="myTransactionManager" />
 
 	<!-- Add support for reading web resources: css, images, js, etc ... -->
-	<mvc:resources location="/resources/" mapping="/resources/**"></mvc:resources>
+		<mvc:resources location="/resources/" mapping="/resources/**"></mvc:resources>
+	
 	
 	
 	
